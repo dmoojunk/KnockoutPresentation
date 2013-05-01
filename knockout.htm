@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Knockout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Batman meets... Aquaman?">
+    <meta name="author" content="Thomas Park">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootswatch.css" rel="stylesheet">
+  </head>
+  <body class="preview" id="top">
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand">Knockout JS and why Mike is wrong</a>
+        </div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed">
+      <ul class="nav nav-pills">
+        <li class=""><a href="#whatisit">What is it?</a></li>
+        <li class=""><a href="#whatdoesitdo">What does it do?</a></li>
+        <li class=""><a href="#butilovejquery">But I love jQuery!</a></li>
+        <li class=""><a href="#basicexample">Basic Example</a></li>
+        <li class=""><a href="#listsexample">Working with lists</a></li>
+        <li class=""><a href="#otherstuff">Other stuff</a></li>
+        <li class=""><a href="#questions">Questions?</a></li>
+      </ul>
+    </div>
+    <div class="container main">
+      
+      <div class="row">
+        <div class="span12">
+          <br/>
+          <img src="img/ko-logo.png"/>
+          <a id="whatisit"></a>
+          <h2 class="white">So... what is it?</h2><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <ul>
+            <li><h4>Open Source JavaScript library </h4> - (MIT license) Source on GitHub with an active community</li><br/>
+            <li><h4>MVVM Pattern</h4> - a clear separation between domain data, view components and data to be displayed</li><br/>
+            <li><h4>Maintainable</h4> - jQuery can quickly become an unreadable mess of interrelated event handlers.</li><br/>
+          </ul>
+        </div>
+      </div>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <div class="row">
+        <div class="span12">
+          <a id="whatdoesitdo"></a>
+          <h2 class="white">What does it do?</h2><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <ul>
+            <li><h4>Automatic dependency tracking</h4> - updates the right parts of your UI whenever your data model changes.</li><br/>
+            <li><h4>Declarative bindings</h4> - a simple and obvious way to connect parts of your UI to your data model. You can construct a complex dynamic UIs easily using arbitrarily nested binding contexts.</li><br/>
+            <li><h4>Integrated Templating</h4> - using a native template engine although other templating engines can be used, such as jquery.tmpl, mustache etc.</li><br/>
+          </ul>
+        </div>
+      </div>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <div class="row">
+        <div class="span12">
+          <a id="butilovejquery"></a>
+          <h2 class="white">But I love jQuery!</h2><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <ul>
+            <li><h4>Not a jQuery replacement</h4> - solves a different problem</li><br/>
+            <li><h4>Speed of development</h4> - automates what amounts to the majority of Javascript development work, which is listening to events and binding callbacks</li><br/>
+            <li><h4>Abstract</h4> - events are abstracted away so you don’t have to think about the low level aspects of it, and can get on with making the UI.</li><br/>
+          </ul>
+        </div>
+      </div>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <div class="row"
+        <div class="row">
+          <div class="span12">
+            <a id="basicexample"></a>
+            <h2 class="white">Basic Example, and a shoddy attempt to clone jsFiddle</h2><br/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span6 editor">
+            <h4>Html</h4>
+            <textarea data-bind='value: basicExampleUserHtml'> </textarea>
+            <h4>Script</h4>
+            <textarea data-bind='value: basicExampleUserScript'> </textarea>
+          </div>
+          <div class="span6">
+            <h4>Output <button type="button" class="btn btn-info pull-right" data-bind="click:$root.toggleBasicOutput" style="margin-left:0.5em;">Toggle</button><button type="button" class="btn btn-success pull-right" data-bind="click:runBasicExample">Run!</button></h4>
+            <div id="basicExampleIframe" data-bind="visible:showBasicExampleOutput"></div>
+          </div>
+        </div>
+        <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <div class="row"
+        <div class="row">
+          <div class="span12">
+            <a id="listsexample"></a>
+            <h2 class="white">Working with Lists</h2><br/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span6 editor">
+            <h4>Html</h4>
+            <textarea data-bind='value: listsExampleUserHtml'> </textarea>
+            <h4>Script</h4>
+            <textarea data-bind='value: listsExampleUserScript'> </textarea>
+            
+          </div>
+          <div class="span6">
+            <h4>Output <button type="button" class="btn btn-info pull-right" data-bind="click:$root.toggleListOutput" style="margin-left:0.5em;">Toggle</button><button type="button" class="btn btn-success pull-right" data-bind="click:runListsExample">Run!</button></h4>
+            <div id="listsExampleIframe" data-bind="visible:showListExampleOutput"></div>
+          </div>
+        </div>
+        <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <div class="row">
+        <div class="span12">
+          <a id="otherstuff"></a>
+          <h2 class="white">Other Stuff</h2><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <ul>
+            <li><h4>SPA Applications</h4> - integrate with browser cache for a full offline experience</li><br/>
+            <li><h4>Easy to extend</h4> - hundreds of extensions available. Easy to write your own.</li><br/>
+            <li><h4>Integration with Server</h4> - ajax calls to get, then parse data automatically into a viewmodel. ability to flatten viewmodel for post back to the server.</li><br/>
+            <li><h4>Slower than jQuery for DOM manipulations</h4> - just dont make it bind and render a table of 1000 items.</li><br/>
+          </ul>
+        </div>
+      </div>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <div class="row">
+        <div class="span12">
+          <a id="questions"></a>
+          <h2 class="white">Questions?</h2><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+
+        </div>
+      </div>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+        </div><!-- /container -->
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/jquery.smooth-scroll.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootswatch.js"></script>
+        <script src="js/knockout-2.2.1.js"></script>
+        <script src="js/fiddleCloneViewModel.js"></script>
+        <script>
+        $(function() {
+        ko.applyBindings(new ViewModel());
+        });
+        </script>
+      </body>
+    </html>
