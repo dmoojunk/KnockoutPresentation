@@ -21,6 +21,7 @@
 
 		self.listsExampleUserHtml  = ko.observable('<form data-bind="submit: $root.addItem">\n    New item:<input data-bind="value: itemToAdd" />\n    <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>\n    <ul data-bind="foreach: items">\n        <li><span data-bind="text:$data"></span></li>\n    </ul>\n</form>');
 		self.listsExampleUserScript  = ko.observable('var SimpleListModel = function(items) {\n    self = this;\n    self.items = ko.observableArray(items);\n    self.itemToAdd = ko.observable("");\n    self.addItem = function() {\n        if (self.itemToAdd() != "") {\n            self.items.push(this.itemToAdd());\n            self.itemToAdd("");\n        }\n    }\n};\n ko.applyBindings(new SimpleListModel(["Alpha", "Beta", "Gamma"]));');
+		
 		//Functions	
 		self.runBasicExample = function(){
 
