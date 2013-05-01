@@ -455,3 +455,15 @@ iframe{
 	min-height:150px;
 	width:98%;
 }
+
+input[type="text"]{
+	height:30px;
+}
+
+.navbar [class^="icon-"]{
+	vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, p, li{
+	line-height: 100%;
+}

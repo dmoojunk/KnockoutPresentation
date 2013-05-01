@@ -14,19 +14,22 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootswatch.css" rel="stylesheet">
   </head>
-  <body class="preview" id="top">
+  <body class="preview" id="top" data-bind="style: { 'font-size' : $root.fontSize}">
     <!-- Navbar
     ================================================== -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand">Knockout JS</a>
+          <button type="button" class="btn btn-info pull-right" data-bind="click:increaseTextSize"><i class="icon-plus"></i></button>
+          <button type="button" class="btn btn-warning pull-right" data-bind="click:decreaseTextSize"><i class="icon-minus"></i></button>
         </div>
       </div>
     </div>
     <div class="subnav subnav-fixed">
       <ul class="nav nav-pills">
         <li class=""><a href="#whatisit">What is it?</a></li>
+        <li class=""><a href="#mvvm">MVVM</a></li>
         <li class=""><a href="#whatdoesitdo">What does it do?</a></li>
         <li class=""><a href="#butilovejquery">But I love jQuery!</a></li>
         <li class=""><a href="#basicexample">Basic Example</a></li>
@@ -49,8 +52,26 @@
         <div class="span12">
           <ul>
             <li><h4>Open Source JavaScript library </h4> - (MIT license) Source on GitHub with an active community</li><br/>
-            <li><h4>MVVM Pattern</h4> - a clear separation between domain data, view components and data to be displayed</li><br/>
-            <li><h4>Maintainable</h4> - jQuery can quickly become an unreadable mess of interrelated event handlers.</li><br/>
+            <li><h4>Data binding MVVM Pattern</h4> - a clear separation between domain data, view components and data to be displayed</li><br/>
+            <li><h4>Simplfies complex interactions</h4> - jQuery can quickly become an unreadable mess of interrelated event handlers.</li><br/>
+          </ul>
+        </div>
+      </div>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <br/><br/><br/><br/>
+      <div class="row">
+        <div class="span12">
+          <a id="mvvm"></a>
+          <h2 class="white">MVVM - Model View ViewModel</h2><br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <ul>
+            <li><h4>Model</h4> - Server data</li><br/>
+            <li><h4>View</h4> - HTML markup</li><br/>
+            <li><h4>View Model</h4> - Client side model (javascript)</li><br/>
           </ul>
         </div>
       </div>
@@ -108,7 +129,13 @@
             <textarea data-bind='value: basicExampleUserScript'> </textarea>
           </div>
           <div class="span6">
-            <h4>Output <button type="button" class="btn btn-info pull-right" data-bind="click:$root.toggleBasicOutput" style="margin-left:0.5em;">Toggle</button><button type="button" class="btn btn-success pull-right" data-bind="click:runBasicExample">Run!</button></h4>
+            <h4>Output 
+              <button type="button" class="btn btn-success pull-right" data-bind="click:runBasicExample" style="margin-left:0.5em;">Run!</button>
+              <button type="button" class="btn btn-info pull-right" data-bind="click:$root.toggleBasicOutput" style="margin-left:0.5em;">Toggle</button>
+              <button type="button" class="btn btn-warning pull-right" data-bind="click:$root.cheatBasic3" style="margin-left:0.5em;">stage 3</button>
+              <button type="button" class="btn btn-warning pull-right" data-bind="click:$root.cheatBasic2" style="margin-left:0.5em;">stage 2</button>
+              <button type="button" class="btn btn-warning pull-right" data-bind="click:$root.cheatBasic1" style="margin-left:0.5em;">stage 1</button>
+            </h4>
             <div id="basicExampleIframe" data-bind="visible:showBasicExampleOutput"></div>
           </div>
         </div>
@@ -131,7 +158,13 @@
             
           </div>
           <div class="span6">
-            <h4>Output <button type="button" class="btn btn-info pull-right" data-bind="click:$root.toggleListOutput" style="margin-left:0.5em;">Toggle</button><button type="button" class="btn btn-success pull-right" data-bind="click:runListsExample">Run!</button></h4>
+            <h4>Output 
+              <button type="button" class="btn btn-success pull-right" data-bind="click:runListsExample" style="margin-left:0.5em;">Run!</button>
+              <button type="button" class="btn btn-info pull-right" data-bind="click:$root.toggleListOutput" style="margin-left:0.5em;">Toggle</button>
+              <button type="button" class="btn btn-warning pull-right" data-bind="click:$root.cheatLists3" style="margin-left:0.5em;">stage 3</button>
+              <button type="button" class="btn btn-warning pull-right" data-bind="click:$root.cheatLists2" style="margin-left:0.5em;">stage 2</button>
+              <button type="button" class="btn btn-warning pull-right" data-bind="click:$root.cheatLists1" style="margin-left:0.5em;">stage 1</button>
+            </h4>
             <div id="listsExampleIframe" data-bind="visible:showListExampleOutput"></div>
           </div>
         </div>
